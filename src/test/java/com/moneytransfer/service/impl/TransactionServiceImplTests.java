@@ -22,13 +22,13 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.ibm.icu.util.Calendar;
 import com.moneytransfer.entity.Account;
 import com.moneytransfer.entity.Transaction;
 import com.moneytransfer.repository.TransactionRepository;
 import com.moneytransfer.service.impl.TransactionServiceImpl;
 import com.moneytransfer.utils.ComparableArgumentMatcher;
 import com.moneytransfer.utils.IDateUtils;
+import java.util.Calendar;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -50,7 +50,6 @@ public class TransactionServiceImplTests {
 	
 	@Test
 	public void whenFindByIdHasNoAccountId_thenThrowIllegalArgumentException() { 
-		//List<Transaction> findByAccountIdAndTransactionDateBetween(Long accountId, Date fromDate, Date toDate);
 
 		
 		Calendar cal = Calendar.getInstance();
